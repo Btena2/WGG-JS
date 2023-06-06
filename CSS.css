@@ -1,0 +1,103 @@
+body {
+    color: #66ff00;
+    font-family: 'Courier New', monospace;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container {
+    max-width: 600px;
+    padding: 20px;
+    text-align: center;
+}
+
+.container h1 {
+    font-size: 40px;
+}
+
+.container p {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.container .game {
+    font-size: 24px;
+    margin-top: 40px;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, #008000 0%, #008000 10%, transparent 10%);
+    opacity: 0.4;
+    pointer-events: none;
+    z-index: -1;
+    animation: hacker-background 10s linear infinite;
+}
+
+.container input[type="text"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.container input[type="submit"] {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.container input[type="submit"]:hover {
+    background-color: #00b300;
+}
+
+#guess-button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #008000;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+}
+
+#guess-button:hover {
+    background-color: #00b300;
+}
+
+#guess-button:disabled {
+    background-color: #555;
+    cursor: not-allowed;
+}
+
+#guess-button:focus {
+    outline: none;
+    box-shadow: 0 0 5px #66ff00;
+}
+
+@keyframes hacker-background {
+    from {
+        background-position: 0 0;
+    }
+
+    to {
+        background-position: 1000px 0;
+    }
+}
